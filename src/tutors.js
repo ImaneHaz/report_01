@@ -14,11 +14,12 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'William Robinson', subject: 'Computer Science', rating: 4.6, ageRange: '10-15', mode: 'in-person', location: 'New York', image: 'https://randomuser.me/api/portraits/men/10.jpg' }
     ];
 
-    let currentFilter = tutors; 
+    let currentFilter = tutors;
 
+    // Function to display tutors
     function displayTutors(filteredTutors) {
         const tutorList = document.getElementById('tutor-list');
-        tutorList.innerHTML = ''; 
+        tutorList.innerHTML = '';
 
         filteredTutors.forEach(tutor => {
             const li = document.createElement('li');
@@ -38,9 +39,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Function to filter by age
     function filterByAge() {
         const userAge = parseInt(document.getElementById('user-age').value);
-        console.log("User age entered:", userAge); 
+        console.log("User age entered:", userAge);
 
         let ageRange;
 
@@ -56,32 +58,50 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         currentFilter = tutors.filter(tutor => tutor.ageRange === ageRange);
-        console.log("Filtered tutors based on age range:", currentFilter); 
+        console.log("Filtered tutors based on age range:", currentFilter);
 
         displayTutors(currentFilter);
     }
 
-    function filterTutors(criteria) {
-        console.log("Filter criteria selected:", criteria); ì
+    // Function to filter by location
+    function filterByLocation(location) {
+        console.log("Filter location selected:", location);
 
-        const filteredTutors = currentFilter.filter(tutor => {
-            return tutor.mode === criteria || tutor.location === criteria;
-        });
+        const filteredTutors = tutors.filter(tutor => tutor.location === location);
 
-        console.log("Tutors after applying filter:", filteredTutors); 
+        console.log("Tutors after applying location filter:", filteredTutors);
 
         displayTutors(filteredTutors);
     }
 
-  
+    // Function to filter by mode
+    function filterByMode(mode) {
+        console.log("Filter mode selected:", mode);
+
+        const filteredTutors = tutors.filter(tutor => tutor.mode === mode);
+
+        console.log("Tutors after applying mode filter:", filteredTutors);
+
+        displayTutors(filteredTutors);
+    }
+
+    // Event listener for age filter
     document.getElementById('age-filter-btn').addEventListener('click', filterByAge);
 
-    document.querySelectorAll('.filter-btn').forEach(button => {
+    // Event listeners for location filter
+    document.querySelectorAll('.location-filter-btn').forEach(button => {
         button.addEventListener('click', () => {
-            filterTutors(button.getAttribute('data-criteria'));
+            filterByLocation(button.getAttribute('data-location'));
         });
     });
 
+    // Event listeners for mode filter
+    document.querySelectorAll('.mode-filter-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            filterByMode(button.getAttribute('data-mode'));
+        });
+    });
 
+    // Initial display of all tutors
     displayTutors(tutors);
 });
