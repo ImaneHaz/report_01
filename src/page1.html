@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Graph Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Function Graph Generator</h1>
+        <form action="/generate" method="POST">
+            <label for="functionInput">Enter your function:</label>
+            <input type="text" id="functionInput" name="function">
+            <button type="submit">Generate Graph</button>
+        </form>
+        <canvas id="myChart" width="400" height="400"></canvas>
+    </div>
+</body>
+</html>
