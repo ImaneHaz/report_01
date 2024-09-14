@@ -6,12 +6,12 @@ nav_order: 11
 
 # Developer Guide
 
-Cavapp is a completely open-source project, and as such, we are delighted to receive contributions from any developers who wish to participate in its development. To modify or add code to the current codebase, the following steps are necessary:
+*GraphProject* is an open-source project, and we encourage contributions from developers who wish to participate in its development. To modify or add code to the current codebase, please follow these steps:
 
-- Fork the project on GitHub
-- Add/modify the desired code
-- Add/modify tests relevant to the changes made
-- Pay attention to using the semantics of conventional commits
-- Submit a pull request documenting the changes made, the choices, and the motivations behind them
+- Fork the project on GitHub.
+- Add or modify the desired code, ensuring it aligns with the project’s structure and functionality.
+- Add or modify tests that correspond to the changes made to ensure code reliability.
+- Follow the semantics of **conventional commits** when writing commit messages.
+- Submit a pull request documenting the changes made, explaining the choices and motivations behind them.
 
-Once this is done, the continuous integration process will automatically check that the changes conform to the conventions we have adopted for this project, that the tests are present and do not fail. Then, if everything is successful, the pull request will be accepted, resulting in the release of a new version of the software.
+Once the pull request is submitted, the continuous integration (CI) process will automatically verify that the changes conform to the project's conventions and that the tests pass successfully. If everything is in order, the pull request will be accepted, resulting in the release of a new version of the software.
