@@ -6,8 +6,8 @@ nav_order: 1
 ---
 # GraphProject Documentation
 
-### Authors
-- [Imane Haz](mailto:your-email@example.com)
+### Author
+- Imane Hazim - (imane.hazim@studio.unibo.it)
 
 ## Abstract
 
