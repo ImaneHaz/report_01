@@ -7,7 +7,7 @@ nav_order: 5
 # Development
 
 ## DVCS
-To track the development of our project, I used a Github repository and created a dedicated organization called `unibo-dtm-se-2324-graphproject Owner`. The main repository is `GraphProject`, which was divided into several branches: the `master` branch contains project releases. 
+To track the development of our project, I used a Github repository and created a dedicated organization called `unibo-dtm-se-2324-graphproject Owner`. The main repository is `GraphProject`; since I am the sole contributor to the project, I chose to simplify the workflow by managing everything within the master branch. I ensured code quality by committing frequently and testing before pushing to the repository. The feature branches are applied when working on isolated tasks or new features, which are merged back into master once they are stable.
 
 
 Commits were written following the [Conventional Commit](https://www.conventionalcommits.org/en/v1.0.0/) approach. A commit is therefore written in the following format:
