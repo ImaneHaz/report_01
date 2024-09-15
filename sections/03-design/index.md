@@ -6,49 +6,54 @@ nav_order: 4
 
 # Design
 
-This chapter explains the strategies used to meet the requirements identified in the analysis.
+This chapter outlines the strategies used to meet the requirements identified in the analysis.
 
 ## Architecture
 
-At a high level, GraphProject consists of three fundamental components:
+At a high level, **GraphProject** consists of three fundamental components:
 
-- The backend, which provides a REST API for all application functionalities.
-- The frontend web application, which interfaces with the backend through the REST API.
-- The NoSQL database, which handles data persistence for user preferences, tutor information, and saved graph data.
+- **Backend**: Provides a REST API that handles core functionalities, such as tutor recommendations and graph plotting, and interfaces with the database for data persistence.
+- **Frontend Web Application**: Communicates with the backend through the REST API, allowing users to input preferences for tutor recommendations and graph equations.
+- **NoSQL Database**: Stores user preferences, tutor information, and graph data in a flexible format that supports scalability and fast querying.
 
-The chosen architecture follows a layered approach:
+The architecture follows a **layered approach**:
 
-- Presentation layer: Handles user interactions and displays tutor recommendations and graphs.
-- Business layer: Implements the core application logic, including matching user preferences with tutor data and managing graph plotting requests.
-- Persistence layer: Interfaces with the NoSQL database for storing and retrieving user and tutor data.
-- Database layer: Manages the storage of tutor information, user preferences, and other relevant data in a NoSQL format.
+- **Presentation Layer**: Responsible for handling user interactions, displaying tutor recommendations and rendering graphs on the frontend.
+- **Business Logic Layer**: Implements the core logic, including matching user preferences with tutors and processing graph plotting requests.
+- **Persistence Layer**: Interfaces with the NoSQL database for storing and retrieving tutor data, user preferences, and graph configurations.
+- **Database Layer**: Manages data storage in a NoSQL structure, ensuring flexible and scalable storage of user, tutor, and graph data.
 
 ## Modelling
 
-- This section explains how the system’s domain has been modeled, such as defining key entities like User, Tutor, Graph, and Recommendation.
-- The domain model is structured to handle user preferences, tutor data, and graph generation seamlessly.
-- Class diagrams will highlight the relationships between these core entities and showcase how these designs address the requirements.
-    - For instance, how Tutor objects are filtered and matched based on user criteria.
-    - Tactical patterns and Domain-Driven Design (DDD) principles are applied to model complex behaviors like tutor recommendation and graph plotting.
+- The system's domain is modeled around key entities such as **User**, **Tutor**, **Recommendation**, and **Graph**.
+- These entities are structured to handle seamless user preference matching, tutor data retrieval, and graph generation.
+- **Class Diagrams** highlight the relationships between these entities, focusing on:
+    - How user preferences are stored and processed.
+    - How tutors are filtered based on criteria such as location, mode of tutoring, and expertise.
+    - How graphs are generated based on user inputs.
+- **Domain-Driven Design (DDD)** principles are used to manage the complexity of tutor recommendation and graph plotting behaviors.
 
 ## Interaction
 
-- This section will describe the behavior of the system using sequence or activity diagrams.
-    - For instance, a sequence diagram that shows how the system processes a tutor recommendation request: from user input to retrieving matching tutors from the NoSQL database and delivering them to the frontend.
-    - Another sequence diagram could illustrate the graph plotting flow, from user equation input to graph rendering.
+- **Sequence Diagrams** illustrate how the system processes key workflows, such as:
+    - **Tutor Recommendation Flow**: From user input (age, preferences) to retrieving matching tutors from the database and sending them to the frontend for display.
+    - **Graph Plotting Flow**: From user input of a mathematical equation to graph rendering based on the specified X and Y axis ranges.
+- Activity diagrams are used to visualize complex processes and interactions between the backend, frontend, and database.
 
 ## Behaviour
 
-- This section will explain the possible states of the system, using UML state diagrams to show:
-    - States like User Authenticated, Recommendation Generated, and Graph Rendered.
-    - Transitions between states, triggered by user actions (e.g., inputting filters, requesting recommendations, submitting graph equations).
+- **State Diagrams** describe the different states the system can be in, including:
+    - **User Authenticated**: The user has successfully logged in.
+    - **Recommendation Generated**: The system has provided tutor recommendations based on user inputs.
+    - **Graph Rendered**: A graph has been successfully generated from the user’s input equation.
+- Transitions between these states are triggered by user actions, such as submitting filters, requesting recommendations, or plotting graphs.
 
-## Data-related aspects
+## Data-related Aspects
 
-- Data schema: The database schema uses a NoSQL structure, storing data in documents for Users, Tutors, Recommendations, and Graph Configurations.
-    - User document stores user details, including preferences and history.
-    - Tutor document stores tutor-specific details such as subject expertise, rating, and availability.
-    - Recommendation document logs the matching results for user queries.
-    - Graph Configuration document saves user-defined equations and graph settings.
-- Data persistence technologies: The system uses a NoSQL database like MongoDB or Firebase, ensuring flexible, scalable data storage and fast querying for tutor recommendations and graph plotting.
-- Backup and recovery: Regular backups will be configured to ensure data integrity and quick recovery in case of failure.
+- **Data Schema**: The database uses a NoSQL schema with the following key documents:
+    - **User Document**: Stores user details, including their preferences, past recommendations, and graph history.
+    - **Tutor Document**: Contains tutor-specific information such as subjects, ratings, and availability.
+    - **Recommendation Document**: Logs the results of tutor queries based on user preferences.
+    - **Graph Configuration Document**: Stores the user's input equations and graph settings.
+- **Data Persistence Technologies**: The system utilizes a NoSQL database like MongoDB or Firebase to provide flexible, scalable, and fast access to stored data.
+- **Backup and Recovery**: Regular data backups will be scheduled to ensure integrity and enable quick recovery in case of system failure.
