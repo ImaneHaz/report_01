@@ -6,15 +6,20 @@ nav_order: 8
 
 # Deployment
 
-To deploy the backend and web frontend of the project and perform testing, follow these steps:
+## Overview
 
-- Clone the project repository.
-- Navigate to the backend directory and run the provided script called `deploy-backend` (choose the appropriate version for the operating system being used). This script:
-    - Installs the necessary dependencies.
-    - Deploys the client-side data management local data in JavaScript arrays (e.g., MongoDB, Firebase, etc.).
-    - Deploys the backend.
-- Navigate to the web frontend directory and run the provided script called `deploy-frontend` (choose the appropriate version for the operating system being used). This script:
-    - Installs the necessary dependencies.
-    - Deploys the web frontend.
-- Access the website through a web browser.
+The *GraphProject* is primarily a web-based project using **HTML, CSS, and JavaScript** for the tutor recommendation system and graph plotting tool, served using **Node.js** and **Express**. The project also includes a **Jekyll** website hosted on GitHub Pages to display the documentation and project details.
 
+## Branch-specific Deployment (Jekyll Site)
+
+In the `feature/some-feature` branch, you will find two additional files: **Gemfile** and **Gemfile.lock**. These files are essential for managing the dependencies for the Jekyll-based project website hosted at https://imanehaz.github.io/GraphProject/.
+
+- **Gemfile**: Specifies the version of **Jekyll** and any plugins used to build the website. This file ensures that the site is built with the correct tools.
+- **Gemfile.lock**: Locks the exact versions of the dependencies listed in the **Gemfile**, ensuring consistency across environments.
+
+These files are crucial for maintaining the Jekyll website. They help manage dependencies and ensure the site builds consistently both locally and on GitHub Pages.
+
+### Jekyll-based Website
+To deploy the Jekyll site, GitHub Pages automatically builds the site using the **Gemfile** and **Gemfile.lock**. No additional steps are required once the branch is pushed to GitHub, as GitHub Pages will handle the deployment.
+
+By keeping the Gemfile and Gemfile.lock in the feature/some-feature branch, the Jekyll website remains functional, ensuring that the documentation is properly hosted and up-to-date.
