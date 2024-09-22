@@ -35,3 +35,4 @@ The user opens the graph plotting tool.
 Inputs an equation (e.g., y = x^2).
 Specifies the X and Y axis range for the graph.
 The system generates and displays the graph.
+
