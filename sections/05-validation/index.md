@@ -10,8 +10,8 @@ nav_order: 6
 
 - The testing process for GraphProject followed a combination of **Test-Driven Development (TDD)** and **manual testing** to ensure that all features meet the functional and non-functional requirements.
     - **Test development process**: Before implementing a feature, we first wrote unit tests for core components, including the tutor recommendation engine and graph plotting module. This helped in ensuring that the implementation met the desired functionality from the start.
-    - **Success rate**: The majority of our tests passed on the first run, with a success rate of 95%. Remaining tests were adjusted after refactoring the filtering logic for tutor recommendations.
-    - **Coverage**: We aimed for high test coverage, particularly for critical parts like the recommendation engine and the graph plotting system. The final test coverage reached 90% of the total codebase, ensuring that most features were thoroughly tested.
+    - **Success rate**: The majority of the tests passed on the first run, with a success rate of 95%. Remaining tests were adjusted after refactoring the filtering logic for tutor recommendations.
+    - **Coverage**: I aimed for high test coverage, particularly for critical parts like the recommendation engine and the graph plotting system. The final test coverage reached 90% of the total codebase, ensuring that most features were thoroughly tested.
     - **Comments regarding acceptance criteria**: The tests were designed to match the **requirements' acceptance criteria**, verifying that user preferences (age, location, tutoring mode) were correctly applied in the recommendation system. Similarly, graph plotting tests ensured that equations were rendered accurately within the defined X and Y ranges.
 
 ## Acceptance test
