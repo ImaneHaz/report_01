@@ -6,12 +6,31 @@ nav_order: 9
 
 # CI/CD
 
-## High-level description
+## Overview
 
-In my  *GraphProject*, I've implemented a robust CI/CD pipeline to ensure the integrity and quality of the codebase. Each component of the project is equipped with its own set of tests, covering functionality, edge cases, and integration scenarios.
+In my *GraphProject*, I have set up a simple automated process to maintain the quality of the codebase. While my project doesn’t rely on an advanced CI/CD pipeline, I use **manual testing** and **version control** to ensure that new changes are stable and functional.
 
-Whenever a developer attempts to push new changes, typically via a pull request to the `master` branch, our CI/CD system is triggered. First, it runs a series of code checks, including linting and formatting validations, to ensure consistency and adherence to coding standards. Next, the system executes the suite of tests associated with the modified code, verifying that new changes do not break existing functionality.
+Whenever I push new changes to the repository, I manually run a set of tests to verify that the core functionalities, such as tutor recommendations and graph plotting, are working as expected. I focus on making sure that:
 
-Additionally, I incorporate code coverage analysis into the pipeline, generating comprehensive reports to assess the effectiveness of our test suite. If all checks pass successfully, the pipeline automatically triggers the creation of a new release version. Using semantic release guidelines, this versioning process is seamlessly tied to the commit history, providing clear and meaningful version increments. The newly created release is then published directly to our GitHub repository, making it easily accessible to stakeholders and users.
+- The user interface responds correctly to user inputs.
+- Filtering and recommendations in the tutor system are accurate.
+- Graph plotting behaves as expected, even with different equations.
 
-If any of the checks fail, the CI/CD pipeline acts as a gatekeeper, blocking the merge of faulty code into the `master` branch. This automated process ensures that the codebase remains stable over time, consistently aligned with the established development conventions agreed upon by the team. Moreover, the pipeline helps detect potential errors early, enhancing the overall stability and reliability of the software.
+## Version Control
+
+I use **Git** for version control, ensuring that all updates are properly tracked. I regularly commit changes and use **branches** to test new features before merging them into the main branch.
+
+- Commits are written with clear messages that describe the changes.
+- I use **GitHub** to store and collaborate on the project, keeping the repository updated with every change.
+
+## Manual Testing Process
+
+To ensure the project is working as expected, I manually:
+
+1. Run tests for core functionality, such as the graph plotting and tutor recommendation system.
+2. Check that the static files (HTML, CSS, JavaScript) are correctly served using **Node.js** and **Express**.
+3. Verify that all interactions on the user interface (such as filtering tutors by age, location, and mode) are working as intended.
+
+## Deployment
+
+Since this project is mainly focused on **client-side functionality**, deployment is straightforward. I serve the project using a **Node.js server** that hosts the static files. I also use GitHub Pages for hosting the web version of the project, allowing users to access it directly through a web browser.
