@@ -1,4 +1,3 @@
-
 ---
 title: Developer guide
 has_children: false
