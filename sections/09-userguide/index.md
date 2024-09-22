@@ -15,3 +15,5 @@ To use *GraphProject*, you can access the web-based version through any compatib
     - To plot a graph, navigate to the graph tool, input a mathematical equation (e.g., `y = x^2`), define the X and Y ranges, and click the "Plot Graph" button to visualize the graph.
 - To modify your profile (e.g., age, location preferences), access the **settings** section, where you can update your information.
 - If you wish to delete your profile, you can do so by navigating to the **settings** page and selecting the "Delete Profile" option.
+
+
