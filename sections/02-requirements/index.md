@@ -23,8 +23,8 @@ nav_order: 3
     - **Acceptance Criteria**: Recommendations should be delivered within 3 seconds, and graph rendering should take less than 2 seconds.
 
 ## Implementation Requirements
-- **Backend API**: Develop scalable REST APIs to manage user preferences, retrieve tutor data, and generate graphs.
-    - **Acceptance Criteria**: APIs should be well-documented and follow REST principles, enabling smooth communication between frontend and backend.
+- **Backend static file serving using Node.js and Express**: Develop scalable REST static file serving using Node.js and Expresss to manage user preferences, retrieve tutor data, and generate graphs.
+    - **Acceptance Criteria**: static file serving using Node.js and Expresss should be well-documented and follow REST principles, enabling smooth communication between frontend and backend.
 - **Frontend Web**: Implement a responsive web interface that adapts to different screen sizes and offers seamless navigation.
     - **Acceptance Criteria**: The web interface should be responsive and provide a smooth user experience across various browsers and devices.
 - **CI/CD Pipeline**: Set up a CI/CD pipeline for automating testing, building, and deploying updates to ensure smooth and consistent application delivery.
