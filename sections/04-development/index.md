@@ -7,7 +7,7 @@ nav_order: 5
 # Development
 
 ## Distributed Version Control System
-To track the development of the project, I used a GitHub repository and created a dedicated organization called `unibo-dtm-se-2324-graphproject`. The main repository is `GraphProject`, with branches for different development stages. The `master` branch contains project releases, while the `develop` branch is used for ongoing development.
+To track the development of the project, I used a GitHub repository and created a dedicated organization called `unibo-dtm-se-2324-graphproject` where there are two repositories 'report' and 'artifact' as requested.
 
 Commits were written following the [Conventional Commit](https://www.conventionalcommits.org/en/v1.0.0/) approach. A commit is therefore written in the following format:
 
