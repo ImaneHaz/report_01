@@ -12,16 +12,16 @@ This chapter outlines the strategies used to meet the requirements identified in
 
 At a high level, **GraphProject** consists of three fundamental components:
 
-- **Backend**: Provides a REST API that handles core functionalities, such as tutor recommendations and graph plotting, and interfaces with the database for data persistence.
-- **Frontend Web Application**: Communicates with the backend through the REST API, allowing users to input preferences for tutor recommendations and graph equations.
-- **NoSQL Database**: Stores user preferences, tutor information, and graph data in a flexible format that supports scalability and fast querying.
+- **Backend**: Provides a REST static file serving using Node.js and Express that handles core functionalities, such as tutor recommendations and graph plotting, and interfaces with the local data in JavaScript arrays for data persistence.
+- **Frontend Web Application**: Communicates with the backend through the REST static file serving using Node.js and Express, allowing users to input preferences for tutor recommendations and graph equations.
+- **client-side data management Database**: Stores user preferences, tutor information, and graph data in a flexible format that supports scalability and fast querying.
 
 The architecture follows a **layered approach**:
 
 - **Presentation Layer**: Responsible for handling user interactions, displaying tutor recommendations and rendering graphs on the frontend.
 - **Business Logic Layer**: Implements the core logic, including matching user preferences with tutors and processing graph plotting requests.
-- **Persistence Layer**: Interfaces with the NoSQL database for storing and retrieving tutor data, user preferences, and graph configurations.
-- **Database Layer**: Manages data storage in a NoSQL structure, ensuring flexible and scalable storage of user, tutor, and graph data.
+- **Persistence Layer**: Interfaces with the client-side data management local data in JavaScript arrays for storing and retrieving tutor data, user preferences, and graph configurations.
+- **Database Layer**: Manages data storage in a client-side data management structure, ensuring flexible and scalable storage of user, tutor, and graph data.
 
 ## Modelling
 
@@ -36,9 +36,9 @@ The architecture follows a **layered approach**:
 ## Interaction
 
 - **Sequence Diagrams** illustrate how the system processes key workflows, such as:
-    - **Tutor Recommendation Flow**: From user input (age, preferences) to retrieving matching tutors from the database and sending them to the frontend for display.
+    - **Tutor Recommendation Flow**: From user input (age, preferences) to retrieving matching tutors from the local data in JavaScript arrays and sending them to the frontend for display.
     - **Graph Plotting Flow**: From user input of a mathematical equation to graph rendering based on the specified X and Y axis ranges.
-- Activity diagrams are used to visualize complex processes and interactions between the backend, frontend, and database.
+- Activity diagrams are used to visualize complex processes and interactions between the backend, frontend, and local data in JavaScript arrays.
 
 ## Behaviour
 
@@ -50,10 +50,10 @@ The architecture follows a **layered approach**:
 
 ## Data-related Aspects
 
-- **Data Schema**: The database uses a NoSQL schema with the following key documents:
+- **Data Schema**: The local data in JavaScript arrays uses a client-side data management schema with the following key documents:
     - **User Document**: Stores user details, including their preferences, past recommendations, and graph history.
     - **Tutor Document**: Contains tutor-specific information such as subjects, ratings, and availability.
     - **Recommendation Document**: Logs the results of tutor queries based on user preferences.
     - **Graph Configuration Document**: Stores the user's input equations and graph settings.
-- **Data Persistence Technologies**: The system utilizes a NoSQL database like MongoDB or Firebase to provide flexible, scalable, and fast access to stored data.
+- **Data Persistence Technologies**: The system utilizes a client-side data management local data in JavaScript arrays like MongoDB or Firebase to provide flexible, scalable, and fast access to stored data.
 - **Backup and Recovery**: Regular data backups will be scheduled to ensure integrity and enable quick recovery in case of system failure.
