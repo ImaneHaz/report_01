@@ -11,7 +11,9 @@ nav_order: 1
 
 ## Abstract
 
-This project, **GraphProject**, aims to develop a tutor recommendation system that allows users to find the best tutors based on preferences such as age, mode of teaching (remote or in-person), and location. The system features a graph plotting tool where users can input equations and specify X and Y ranges for visualization. It includes an API for scalable tutor recommendations and a CI/CD pipeline to automate the testing, building, and deployment processes. This documentation provides a detailed overview of the design, development, and testing processes involved in the project.
+GraphProject is an interactive web-based tool designed to facilitate the visualization of mathematical concepts through dynamic graph plotting. This application allows users to input mathematical equations and specify the desired ranges for the X and Y axes, enabling real-time visualization of the resulting graphs. Aimed at students, educators, and anyone with an interest in mathematics, GraphProject provides a user-friendly interface that simplifies the process of understanding complex functions and their relationships.
+
+The tool supports single and comparative graph generation, enhancing the learning experience by promoting active engagement and experimentation with mathematical equations. By leveraging modern web technologies, GraphProject offers an accessible platform that encourages exploration and fosters critical thinking skills. Future enhancements may include user authentication, the ability to save and share graphs, and additional graph types to further enrich the educational experience.
 
 ## Table of Contents
 
