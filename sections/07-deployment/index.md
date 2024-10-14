@@ -14,7 +14,9 @@ To deploy and access the Graph Website, follow these steps:
 
 - Open your terminal or command prompt and run the following command to clone the repository:
 
+bash
 git clone https://github.com/unibo-dtm-se-2324-graphproject/artifact.git 
+
 
 - Navigate to the project directory:
 
